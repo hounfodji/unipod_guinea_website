@@ -353,6 +353,7 @@ section:nth-of-type(odd) {
 /* Services Section */
 .tabs-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
     border-bottom: 1px solid #ddd;
@@ -656,4 +657,56 @@ section:nth-of-type(odd) {
     body.no-scroll {
         overflow: hidden;
     }
+}
+
+/* Vision Mission Section */
+.vision-mission {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.vision-mission .card {
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.vision-mission .card-icon {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+}
+
+.vision-mission h4 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+    .vision-mission {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tab-content ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: var(--spacing-sm);
+}
+
+.tab-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.tab-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary-green);
+    font-weight: bold;
 }
