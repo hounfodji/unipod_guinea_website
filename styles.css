@@ -394,6 +394,21 @@ section:nth-of-type(odd) {
     display: block;
 }
 
+.tab-content-with-image {
+    display: grid;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.tab-image img {
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -612,6 +627,10 @@ section:nth-of-type(odd) {
     }
     
     .bootcamp-details {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .tab-content-with-image {
         grid-template-columns: 1fr 1fr;
     }
 
